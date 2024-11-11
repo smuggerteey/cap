@@ -157,7 +157,7 @@ jobs:
             --platform managed \
             --region us-central1 \
             --allow-unauthenticated
-          
+
   cleanup:
     name: Cleanup actions
     needs:
