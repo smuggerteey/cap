@@ -2,7 +2,7 @@ version: "3.8"
 
 services:
   web:
-    build: ./porfolio  # Corrected to avoid redundant 'build' keyword
+    build: ./webapp  # Corrected to avoid redundant 'build' keyword
     ports:
       - "5000:5000"
     environment:
@@ -35,7 +35,7 @@ services:
       MYSQL_USER: Tchagaka
       MYSQL_PASSWORD: ${MYSQL_PASSWORD}  # Make sure MYSQL_PASSWORD is passed as an environment variable
     ports:
-      - "3306:3306"
+      - "3306:3306"  # This can be removed if you don't need to expose MySQL port to the outside world
     volumes:
       - mysql-data:/var/lib/mysql
     networks:
