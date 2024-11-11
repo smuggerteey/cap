@@ -7,37 +7,38 @@ app = Flask(__name__)
 def home():
     """
     Landing page
-
     """
+    return render_template("index.html")
 
-    return render_template("home.html")
-
-
-@app.route("/tinotenda")
-def tinotenda_portfolio():
-    return render_template("tinotenda.html")
+@app.route("/registration")
+def registration():
+    return render_template("registration.html")
 
 
-@app.route("/nicholas")
-def nicholas_portfolio():
-    return render_template("nicholas.html")
+@app.route("/login")
+def login():
+    return render_template("login.html")
 
 
-@app.route("/candace")
-def candace_portfolio():
-    return render_template("candace.html")
+@app.route("/admin")
+def admin():
+    return render_template("admin.html")
 
 
-@app.route("/eddy")
-def eddy_portfolio():
-    return render_template("eddy.html")
+@app.route("/artwork")
+def artwork():
+    return render_template("artwork.html")
 
 
-@app.route("/oheneba")
-def oheneba_portfolio():
-    return render_template("oheneba.html")
+@app.route("/marketplace")
+def marketplace():
+    return render_template("marketplace.html")
 
 
-if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=5000)
+@app.route("/profile")
+def profile():
+    return render_template("profile.html")
 
+
+if __name__ == '__main__':
+    app.run(host='0.0.0.0', port=8080)
